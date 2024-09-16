@@ -14,7 +14,10 @@ class Intro extends Phaser.Scene {
 
         this.load.image("logo", "/assets/logo/logo_epee.gif");
 
-        this.load.image("bg_brown", "/assets/ui/bouton/bg_brown.png");
+        this.load.image("bg_brown_credits", "/assets/ui/bouton/bg_brown_credits.png");
+        this.load.image("bg_brown_cj", "/assets/ui/bouton/bg_brown_cj.png");
+        this.load.image("button_audio_active", "/assets/ui/bouton/button_audio_active.png");
+        this.load.image("button_audio_desactive", "/assets/ui/bouton/button_audio_desactive.png");
     }
 
     create() {
@@ -68,20 +71,59 @@ class Intro extends Phaser.Scene {
         this.scene.start("Jeu");
         });
 
+
         /*Bouton Credits*/
-        const bg_brown = this.add
-        .image(config.width - 700, 530, "bg_brown")
+        const bg_brown_credits = this.add
+        .image(config.width - 700, 520, "bg_brown_credits")
         .setOrigin(0, 0)
-        .setScale(0.3)
+        .setScale(0.4)
 
 
-        bg_brown.setInteractive();
+        bg_brown_credits.setInteractive();
 
-        bg_brown.on("pointerdown", () => {
+        bg_brown_credits.on("pointerdown", () => {
         this.scene.start("Credits");
         });
 
         this.add.text(20, 20, "CRÉDITS", {fontSize: "15px", fill: "#009999", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(135, 548);
+
+
+        /*Bouton Comment Jouer*/
+        const bg_brown_cj = this.add
+        .image(config.width - 450, 530, "bg_brown_cj")
+        .setOrigin(0, 0)
+        .setScale(0.3)
+
+
+        bg_brown_cj.setInteractive();
+
+        bg_brown_cj.on("pointerdown", () => {
+        this.scene.start("Comment_jouer");
+        });
+
+        this.add.text(20, 20, "COMMENT JOUER?", {fontSize: "12px", fill: "#009999", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(366, 550);
+
+
+        /*Bouton audio*/
+        const button_audio_active = this.add
+        .image(config.width - 140, 40, "button_audio_active")
+        .setOrigin(0, 0)
+        .setScale(3)
+
+
+        button_audio_active.setInteractive();
+
+        button_audio_active.on("pointerdown", () => {
+        this.add.image(684, 61, "button_audio_desactive").setScale(3);
+        });
+
+ 
+
+
+
+
+
+
 
 
 
