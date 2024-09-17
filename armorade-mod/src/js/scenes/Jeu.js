@@ -10,7 +10,7 @@ class Jeu extends Phaser.Scene {
         this.load.image("plan2", "/assets/bg/DarkForest_Shadow.png");
         this.load.image("plan1", "/assets/bg/DarkForest_Foreground.png");
 
-        this.load.image("commencer", "/assets/ui/bouton/button_ui.png");
+        this.load.image("button_quitter", "/assets/ui/bouton/button_quitter.png");
 
         this.load.image("logo", "/assets/logo/logo_epee.gif");
     }
@@ -54,22 +54,21 @@ class Jeu extends Phaser.Scene {
 
 
         /*titre*/        
-        this.add.text(20, 20, "ARMORADE", {fontSize: "100px", fill: "#009999", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(154, 204);
-        this.add.text(20, 20, "ARMORADE", {fontSize: "100px", fill: "#006666", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(152, 202);
-        this.add.text(20, 20, "ARMORADE", {fontSize: "100px", fill: "#003333", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(150, 200);
+        this.add.text(20, 20, "ARMORADE", {fontSize: "60px", fill: "#009999", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(254, 34);
+        this.add.text(20, 20, "ARMORADE", {fontSize: "60px", fill: "#006666", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(252, 32);
+        this.add.text(20, 20, "ARMORADE", {fontSize: "60px", fill: "#003333", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(250, 30);
 
-        /*Crédits*/
-        const commencer = this.add
-        .image(config.width - 580, 300, "commencer")
+        /*Quitter*/
+        const button_quitter = this.add
+        .image(config.width - 140, 40, "button_quitter")
         .setOrigin(0, 0)
-        .setScale(4)
-        .setCrop(32,0, 16, 16);
+        .setScale(3)
 
 
-        commencer.setInteractive();
+        button_quitter.setInteractive();
 
-        commencer.on("pointerdown", () => {
-        this.scene.start("Jeu");
+        button_quitter.on("pointerdown", () => {
+        this.scene.start("Intro");
         });
 
 

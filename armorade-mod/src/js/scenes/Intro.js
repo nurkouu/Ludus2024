@@ -74,7 +74,7 @@ class Intro extends Phaser.Scene {
 
         /*Bouton Credits*/
         const bg_brown_credits = this.add
-        .image(config.width - 700, 520, "bg_brown_credits")
+        .image(config.width - 630, 520, "bg_brown_credits")
         .setOrigin(0, 0)
         .setScale(0.4)
 
@@ -85,14 +85,14 @@ class Intro extends Phaser.Scene {
         this.scene.start("Credits");
         });
 
-        this.add.text(20, 20, "CRÉDITS", {fontSize: "15px", fill: "#009999", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(135, 548);
+        this.add.text(20, 20, "CRÉDITS", {fontSize: "20px", fill: "#006666", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(215, 545);
 
 
         /*Bouton Comment Jouer*/
         const bg_brown_cj = this.add
-        .image(config.width - 450, 530, "bg_brown_cj")
+        .image(config.width - 360, 520, "bg_brown_cj")
         .setOrigin(0, 0)
-        .setScale(0.3)
+        .setScale(0.4)
 
 
         bg_brown_cj.setInteractive();
@@ -101,7 +101,7 @@ class Intro extends Phaser.Scene {
         this.scene.start("Comment_jouer");
         });
 
-        this.add.text(20, 20, "COMMENT JOUER?", {fontSize: "12px", fill: "#009999", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(366, 550);
+        this.add.text(20, 20, "COMMENT JOUER?", {fontSize: "16px", fill: "#006666", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(460, 547);
 
 
         /*Bouton audio*/
