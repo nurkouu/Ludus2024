@@ -21,10 +21,7 @@ class Intro extends Phaser.Scene {
     }
 
     create() {
-        /*conteneur pour la page d'accueil
-        this.hudContainer = this.add.container(0, 0);*/
-
-
+    
 
         /*Image de fond*/
         let scaleX = 0;
@@ -120,30 +117,6 @@ class Intro extends Phaser.Scene {
  
 
 
-
-
-
-
-
-
-
-
-
-        /* carre
-        let graphics = this.add.graphics();
-
-        graphics.lineStyle(3, 0x004444);
-        graphics.fillStyle(0x005555);
-        
-        let squareSize = config.height / 2;
-        let squareX = (config.width - squareSize) / 2;
-        let squareY = (config.height - squareSize) / 2;
-
-        graphics.fillRect(squareX, squareY, squareSize, squareSize);
-        graphics.strokeRect(squareX, squareY, squareSize, squareSize);*/
-
-
-
         /*logo*/
         this.add.image(0, 0, "logo").setOrigin(0.5, 0.5).setPosition(80, 75).setScale(0.3);
         this.add.image(0, 0, "logo").setOrigin(0.5, 0.5).setPosition(80, 75).setScale(0.3).setFlipX(true);
@@ -155,21 +128,6 @@ class Intro extends Phaser.Scene {
 
 
 
-        /*pour le conteneur
-        this.hudContainer.add([
-            this.img,
-            this.button,
-            this.titre
-          ]);*/
-
-
-        /* this.add
-        .text(10, 10, "Ceci est la scène Accueil", {
-            fontSize: "15px",
-            fill: "#000000"
-        })
-        .setOrigin(0, 0);*/
-    
         }
 
 

@@ -57,6 +57,7 @@ class Partie_terminee extends Phaser.Scene {
          this.add.text(20, 20, "ARMORADE", {fontSize: "60px", fill: "#009999", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(254, 34);
         this.add.text(20, 20, "ARMORADE", {fontSize: "60px", fill: "#006666", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(252, 32);
         this.add.text(20, 20, "ARMORADE", {fontSize: "60px", fill: "#003333", fontFamily:"Pixelify Sans"}).setOrigin(0, 0).setPosition(250, 30);
+        
          /*Quitter*/
          const button_recommencer = this.add
          .image(config.width - 540, 300, "button_recommencer")

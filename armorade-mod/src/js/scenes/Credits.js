@@ -16,8 +16,7 @@ class Credits extends Phaser.Scene {
     }
 
     create() {
-        /*conteneur pour la page d'accueil
-        this.hudContainer = this.add.container(0, 0);*/
+        
         /*Image de fond*/
         let scaleX = 0;
         let scaleY = 0;
